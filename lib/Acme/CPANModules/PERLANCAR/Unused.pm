@@ -25,10 +25,11 @@ Acme-Test-LocaleTextDomain
 Acme-Test-LocaleTextDomainIfEnv
 Acme-Test-LocaleTextDomainUTF8IfEnv
 Acme-Test-crypt
+
 Gepok
 _
 
-chomp(my @modules = split /^/m, $dists);
+chomp(my @modules = grep /\S/, split /^/m, $dists);
 s/-/::/g for @modules;
 
 our $LIST = {
@@ -46,6 +47,14 @@ our $LIST = {
 
 I use this to install all my modules on a new installation:
 
- % setop --diff <(lcpan author-dists PERLANcAR | dist2mod) <(cpanmodules ls-entries PERLANCAR::Unused)
+ # List all used modules
+ % setop --diff <(lcpan author-dists PERLANCAR | dist2mod) <(cpanmodules ls-entries PERLANCAR::Unused)
+
+ # which I can feed to cpanm, or generate a Task:: from
+
+
+=head1 prepend:SEE ALSO
+
+L<Task::PERLANCAR::Used>
 
 =cut
