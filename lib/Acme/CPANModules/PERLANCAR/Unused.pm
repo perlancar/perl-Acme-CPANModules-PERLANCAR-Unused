@@ -45,16 +45,16 @@ our $LIST = {
 
 =head1 DESCRIPTION
 
-I use this to generate L<Task::PERLANCAR::Used>, which in turn I use to install
-all my perl modules on a new perl installation. What I usually do after
+I use this to generate L<Task::BeLike::PERLANCAR::Used>, which in turn I use to
+install all my perl modules on a new perl installation. What I usually do after
 installing a perl with L<perlbrew>:
 
  % cpanm -n App::cpanm::perlancar
- % cpanm-perlancar -n Task::PERLANCAR::Used
+ % cpanm-perlancar -n Task::BeLike::PERLANCAR::Used
 
 
 =head1 prepend:SEE ALSO
 
-L<Task::PERLANCAR::Used>
+L<Task::BeLike::PERLANCAR::Used>
 
 =cut
