@@ -8,7 +8,7 @@ use warnings;
 # DIST
 # VERSION
 
-my $dists = <<'_';
+my $unused_dists = <<'_';
 Acme-PERLANCAR-Dummy
 Acme-PERLANCAR-Dummy-POD
 Acme-PERLANCAR-DumpImportArgs
@@ -36,7 +36,7 @@ our $LIST = {
     entries => [
         map { +{module=>$_} } @modules,
     ],
-    summary => "List of my modules which I am not currently using (and installing)",
+    summary => "List of my modules which are (currently not used by me, currently not installable) ",
 };
 
 
@@ -45,12 +45,12 @@ our $LIST = {
 
 =head1 DESCRIPTION
 
-I use this to install all my modules on a new installation:
+I use this to generate L<Task::PERLANCAR::Used>, which in turn I use to install
+all my perl modules on a new perl installation. What I usually do after
+installing a perl with L<perlbrew>:
 
- # List all used modules
- % setop --diff <(lcpan author-dists PERLANCAR | dist2mod) <(cpanmodules ls-entries PERLANCAR::Unused)
-
- # which I can feed to cpanm, or generate a Task:: from
+ % cpanm -n App::cpanm::perlancar
+ % cpanm-perlancar -n Task::PERLANCAR::Used
 
 
 =head1 prepend:SEE ALSO
