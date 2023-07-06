@@ -29,12 +29,12 @@ Acme-Test-crypt
 Gepok
 _
 
-chomp(my @modules = grep /\S/, split /^/m, $dists);
-s/-/::/g for @modules;
+chomp(my @unused_modules = grep /\S/, split /^/m, $unused_dists);
+s/-/::/g for @unused_modules;
 
 our $LIST = {
     entries => [
-        map { +{module=>$_} } @modules,
+        map { +{module=>$_} } @unused_modules,
     ],
     summary => "List of my modules which are (currently not used by me, currently not installable) ",
 };
