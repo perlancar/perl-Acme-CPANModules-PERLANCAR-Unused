@@ -25,8 +25,12 @@ Acme-Test-LocaleTextDomain
 Acme-Test-LocaleTextDomainIfEnv
 Acme-Test-LocaleTextDomainUTF8IfEnv
 Acme-Test-crypt
-
+App-CreateSparseFile
 Gepok
+Log-Any-App
+Log-Any-IfLOG
+Module-List-WithPath
+Package-MoreUtil
 _
 
 chomp(my @unused_modules = grep /\S/, split /^/m, $unused_dists);
