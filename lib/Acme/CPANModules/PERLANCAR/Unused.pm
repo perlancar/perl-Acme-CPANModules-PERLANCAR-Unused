@@ -29,6 +29,8 @@ App-CreateSparseFile
 Gepok
 Log-Any-App
 Log-Any-IfLOG
+Log-ger-Output-Journald
+Log-ger-UseBaheForDump
 Module-List-WithPath
 Package-MoreUtil
 _
